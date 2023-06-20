@@ -2,6 +2,15 @@
 
 Simple `@toast-ui/calendar` wrapper for vue3, pr welcomes ~
 
+<p align="center">
+  <!-- npm version -->
+  <a href="https://github.com/Lionad-Morotar/toast-ui-calendar-vue3"><img src="https://img.shields.io/npm/v/toast-ui-calendar-vue3.svg" alt="npm package"></a>
+  <!-- ci status -->
+  <a href="https://github.com/Lionad-Morotar/toast-ui-calendar-vue3/actions/workflows/ci-on-release.yml"><img src="https://github.com/Lionad-Morotar/toast-ui-calendar-vue3/actions/workflows/ci-on-release.yml/badge.svg?branch=release" alt="build status"></a>
+  <!-- license -->
+  <a href="https://github.com/Lionad-Morotar/toast-ui-calendar-vue3/blob/release/LICENSE"><img src="https://img.shields.io/github/license/Lionad-Morotar/toast-ui-calendar-vue3" alt="LICENSE"></a>
+</p>
+
 ![Preview](./docs/preview.png)
 
 ## 📸 Run Dev
