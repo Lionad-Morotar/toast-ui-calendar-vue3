@@ -1,6 +1,6 @@
 {
-	"name": "use-scrollbars",
-	"version": "0.4.6",
+  "name": "toast-ui-calendar-vue3",
+  "version": "0.1.0",
 	"private": false,
 	"main": "./dist/lib/index.cjs.js",
 	"module": "./dist/lib/index.esm.js",
@@ -88,20 +88,18 @@
 		"node": ">=16",
 		"pnpm": ">=7"
 	},
-	"repository": "https://github.com/Lionad-Morotar/use-scrollbar",
+  "repository": "https://github.com/Lionad-Morotar/toast-ui-calendar-vue3",
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org"
 	},
-	"homepage": "https://github.com/Lionad-Morotar/use-scrollbar",
+  "homepage": "https://github.com/Lionad-Morotar/toast-ui-calendar-vue3",
 	"author": "Lionad",
 	"license": "MIT",
-	"keywords": [
-		"scrollbar",
-		"virtual",
-		"scroll",
+  "keywords": [
 		"vue3",
-		"vue",
-		"hook",
-		"directive"
+    "calendar",
+    "toast-ui",
+    "tui",
+    "tui-calendar"
 	]
 }
