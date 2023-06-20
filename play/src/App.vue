@@ -15,7 +15,13 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import TuiCalendar from '../../src';
+
+/** for local dev */
+// import TuiCalendar from '../../src';
+
+/** for local test artifacts */
+import TuiCalendar from '../../dist/lib/index.esm.js';
+import '../../dist/style.css';
 
 import { events } from './mock-data.js';
 
