@@ -19,11 +19,17 @@ import { computed } from 'vue';
 /** for local dev */
 // import TuiCalendar from '../../src';
 
-/** for local test artifacts */
-import TuiCalendar from '../../dist/lib/index.esm.js';
-import '../../dist/style.css';
+/** for local artifacts test */
+// import TuiCalendar from '../../dist/lib/index.esm.js';
+// import '../../dist/style.css';
+
+/** for npm pkg test */
+import TuiCalendar from 'toast-ui-calendar-vue3';
+import 'toast-ui-calendar-vue3/dist/style.css'
 
 import { events } from './mock-data.js';
+
+console.log('[debug] TuiCalendar', TuiCalendar)
 
 /**
  * Calendar 配置项

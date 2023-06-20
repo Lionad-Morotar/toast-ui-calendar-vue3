@@ -29,7 +29,9 @@ Simple `@toast-ui/calendar` wrapper for vue3, pr welcomes ~
 
 <script setup lang="ts">
 import { computed } from 'vue';
+
 import TuiCalendar from 'toast-ui-calendar-vue3';
+import 'toast-ui-calendar-vue3/dist/style.css'
 
 import { events } from './mock-data.js';
 
