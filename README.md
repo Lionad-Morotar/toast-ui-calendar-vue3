@@ -97,6 +97,12 @@ const views = computed(() => ([
 </style>
 ```
 
+## 🚩 Help
+
+type is down, help wanted
+
+![type error](./docs/help-type.png)
+
 ## 📄 License
 
 MIT License
