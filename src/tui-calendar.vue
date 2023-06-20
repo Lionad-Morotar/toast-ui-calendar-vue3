@@ -10,6 +10,7 @@ import { cloneDeep } from 'lodash';
 
 import defaultTheme from './theme';
 
+// @ts-ignore types/* is not exported
 import type { ViewType } from '@toast-ui/calendar/types/types/options.d.ts';
 
 const Calendar = markRaw(Calendar_)

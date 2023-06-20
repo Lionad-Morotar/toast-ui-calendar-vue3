@@ -3,16 +3,26 @@
 	"version": "0.1.0",
 	"private": false,
 	"main": "./dist/lib/index.cjs.js",
-	"module": "./dist/lib/index.esm.js",
-	"types": "./dist/types/index.d.ts",
+  "module": "./dist/lib/index.esm.js",
 	"exports": {
 		".": {
 			"require": "./dist/lib/index.cjs.js",
 			"import": "./dist/lib/index.esm.js",
 			"types": "./dist/types/index.d.ts"
 		},
-		"./*": "./*"
+    "./dist/*": "./dist/*"
 	},
+  "types": "./dist/types/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./types/index.d.ts"
+      ]
+    }
+  },
+  "sideEffects": [
+    "*.css"
+  ],
 	"scripts": {
 		"dev": "vite ./play",
 		"serve": "pnpm dev",
@@ -87,7 +97,7 @@
 		"registry": "https://registry.npmjs.org"
 	},
 	"homepage": "https://github.com/Lionad-Morotar/toast-ui-calendar-vue3",
-	"author": "Lionad",
+  "author": "Lionad <1806234223@qq.com>",
 	"license": "MIT",
 	"keywords": [
 		"vue3",

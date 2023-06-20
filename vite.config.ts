@@ -34,7 +34,7 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       minify: false,
-      emptyOutDir: false,
+      emptyOutDir: true,
       lib: {
         entry: path.resolve(__dirname, './src/index.ts'),
         name: 'TuiCalendar',
@@ -57,6 +57,7 @@ export default defineConfig(({ mode }) => {
       vue(),
       enableTypeBuild &&
         dts({
+          entryRoot: './src',
           outputDir: path.resolve(__dirname, './dist/types/'),
           include: ['./src/**/*', 'env.d.ts'],
           copyDtsFiles: true,
