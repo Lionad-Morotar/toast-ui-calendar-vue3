@@ -1,0 +1,11 @@
+dist/
+node_modules
+node_modules/
+types/
+!/.eslintrc.js
+!/rollup.config.js
+!.test
+.temp
+play
+
+playground

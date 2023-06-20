@@ -1,0 +1,30 @@
+node_modules
+dist
+.DS_Store
+.cache
+.temp
+coverage
+
+# local env files
+.local
+.env.local
+.env.*.local
+.eslintcache
+
+# scripts
+scripts/git-pr.js
+scripts/publishDoc.sh
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# .vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+

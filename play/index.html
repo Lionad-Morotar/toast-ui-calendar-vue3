@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TuiCalendar DEV</title>
+    <style title="play.index.css">
+      html,
+      body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #play {
+        height: 100%;
+        width: 100%;
+      }
+
+      .segment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex: 1;
+        padding: 8px;
+        width: max(60vw, 800px);
+        overflow: hidden auto;
+      }
+
+      .play-container {
+        display: grid;
+        grid-template: auto minmax(0, 1fr) / minmax(0, 1fr);
+        box-sizing: border-box;
+        padding: 8px;
+        border: solid 2px #eee;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
+      .header {
+        display: flex;
+        gap: 1em;
+      }
+      .header h4 {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        line-height: 1.75em;
+        font-size: 22px;
+        color: black;
+        text-align: left;
+      }
+      .header h5 {
+        margin: 0;
+        flex-shrink: 0;
+        padding: 0;
+        line-height: 34px;
+      }
+
+      .hidden {
+        position: absolute;
+        width: 0;
+        height: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="play"></div>
+    <script type="module" src="/main.ts"></script>
+  </body>
+
+</html>
