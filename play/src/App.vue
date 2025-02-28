@@ -19,7 +19,7 @@ import moment from 'moment'
 
 /** for npm pkg test */
 // import TuiCalendar  from 'toast-ui-calendar-vue3';
-import 'toast-ui-calendar-vue3/dist/toast-ui-calendar-vue3.css'
+import 'toast-ui-calendar-vue3/styles.css'
 
 import { events } from './mock-data.js';
 import { computed, ref, onMounted } from 'vue';

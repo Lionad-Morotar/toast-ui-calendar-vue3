@@ -58,7 +58,7 @@ export default defineConfig(({ mode }) => {
       enableTypeBuild &&
         dts({
           entryRoot: './src',
-          outputDir: path.resolve(__dirname, './dist/types/'),
+          outDir: path.resolve(__dirname, './dist/types/'),
           include: ['./src/**/*', 'env.d.ts'],
           copyDtsFiles: true,
           compilerOptions: {

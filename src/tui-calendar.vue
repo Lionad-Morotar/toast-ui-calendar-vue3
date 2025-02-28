@@ -39,18 +39,6 @@ const emits = defineEmits([
   'clickMoreEventsBtn',
   'clickTimezoneCollapseBtn'
 ]);
-function getCurrentTimezone() {
-  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const timeZoneOffset = new Date().getTimezoneOffset();
-  const offsetHours = -timeZoneOffset / 60;
-  const formattedOffset = `UTC${offsetHours >= 0 ? '+' : ''}${offsetHours}:00`;
-
-  return {
-    timezoneName: timeZone,
-    displayLabel: timeZone.split('/')[1].slice(0, 2).toUpperCase(), // Country Code Guess
-    tooltip: formattedOffset,
-  };
-}
 
 const props = withDefaults(
   defineProps<{
@@ -179,7 +167,6 @@ function addEvtListeners() {
 }
 
 defineExpose({
-  getCurrentTimezone,
   getRootElement() {
     // @ts-ignore
     return unrefElement(containerRef);
