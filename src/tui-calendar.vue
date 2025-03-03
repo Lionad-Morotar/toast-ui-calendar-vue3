@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, useAttrs, watchEffect, onMounted, onBeforeUnmount, markRaw } from 'vue';
+import { ref,  watchEffect, onMounted, onBeforeUnmount, markRaw } from 'vue';
 import Calendar_ from '@toast-ui/calendar';
 import { unrefElement } from '@vueuse/core'
 import { cloneDeep } from 'lodash';
@@ -25,7 +25,8 @@ const emitEvents = [
   'afterRenderEvent',
   'clickDayName',
   'clickEvent',
-] as const
+  'clickMoreEventsBtn',
+  'clickTimezoneCollapseBtn'] as const
 
 const emits = defineEmits([
   'selectDateTime',
@@ -35,8 +36,10 @@ const emits = defineEmits([
   'afterRenderEvent',
   'clickDayName',
   'clickEvent',
+  'clickMoreEventsBtn',
+  'clickTimezoneCollapseBtn'
 ]);
-const attrs = useAttrs();
+
 const props = withDefaults(
   defineProps<{
     view: string
@@ -64,11 +67,7 @@ const props = withDefaults(
     month: () => ({}),
     timezone: () => ({
       // @see https://timezonedb.com/time-zones
-      zones: [{
-        timezoneName: 'Asia/Shanghai',
-        displayLabel: 'CN',
-        tooltip: 'UTC+08:00',
-      }]
+      zones: []
     }),
     theme: () => cloneDeep(defaultTheme),
     template: () => ({}),
@@ -162,10 +161,8 @@ onBeforeUnmount(() => {
 })
 
 function addEvtListeners() {
-  Object.keys(attrs).forEach((eventName: unknown) => {
-    if (emitEvents.find(x => x === eventName)) {
-      instance.value.on(eventName, (...args: any[]) => emits(eventName as any, ...args));
-    }
+  emitEvents.forEach((eventName: unknown) => {
+    instance.value.on(eventName, (...args: any[]) => emits(eventName as any, ...args));
   });
 }
 
@@ -225,6 +222,7 @@ defineExpose({
     .toastui-calendar-events {
       margin-right: 0 !important;
     }
+
     .toastui-calendar-grid-selection {
       box-sizing: border-box;
       width: calc(100% - 2px);
