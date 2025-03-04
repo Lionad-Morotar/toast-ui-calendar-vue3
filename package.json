@@ -1,6 +1,6 @@
 {
 	"name": "toast-ui-calendar-vue3",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"private": false,
 	"main": "./dist/lib/index.umd.js",
 	"module": "./dist/lib/index.esm.js",
